@@ -1,28 +1,52 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-paper.svg">
-  <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-ink.svg" width="44" align="right" alt="Theoros">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/banners/delivery-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/banners/delivery-light.png">
+  <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/banners/delivery-light.png" width="100%" alt="theoros-delivery">
 </picture>
 
-# theoros-delivery
+<p><a href="LICENSE"><img src="https://img.shields.io/badge/license-source--available%201.0-FF4B1F?style=flat-square&labelColor=11151C" alt="license: source-available 1.0"></a> <img src="https://img.shields.io/badge/status-pre--release-8B929D?style=flat-square&labelColor=11151C" alt="status: pre-release"> <a href="https://github.com/theoros-space"><img src="https://img.shields.io/badge/part-03%20of%2006-3E7BFA?style=flat-square&labelColor=11151C" alt="part: 03 of 06"></a></p>
 
-**03  Signed model packages and over-the-air updates.** Part of the [Theoros](https://github.com/theoros-space) onboard AI product.
+> [!NOTE]
+> **Status:** Pre-release. The repository is public so partners and reviewers can follow the work. Source code lands here from December 2026.
 
-[![License: Theoros Source-Available 1.0](https://img.shields.io/badge/license-source--available-FF4B1F)](LICENSE)
+## Overview
 
-> **Status: pre-release.** This repository is public so partners can follow our work. Source code lands here from December 2026.
+Everything between a trained model and a model running in orbit: packaging,
+signing, uplink and rollback. A satellite only ever runs a package that
+Theoros signed and the operator approved.
 
-## What it is
+## Where it fits
 
-Everything between a trained model and a model running in orbit.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/flow-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/flow-light.png">
+  <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/flow-light.png" width="100%" alt="How Theoros works: sensor, onboard inference, answers, ground, compiler, signed update">
+</picture>
 
-- **Package:** model, sensor fingerprint, capability matrix and manifest in one versioned file.
-- **Sign:** Ed25519 signature; the satellite rejects anything unsigned or modified.
-- **Uplink:** sized to fit a single ground pass, with resumable chunks.
-- **Roll back:** the previous model stays on board until the new one passes its self-test.
+| | Repository | Role |
+|:-:|---|---|
+| `01` | [theoros-models](https://github.com/theoros-space/theoros-models) | Multi-task model, training and the ground compiler |
+| `02` | [theoros-edge](https://github.com/theoros-space/theoros-edge) | Onboard int8 runtime and flight targets |
+| `03` | **theoros-delivery** | Signed model packages and over-the-air updates |
+| `04` | [theoros-ground](https://github.com/theoros-space/theoros-ground) | Customer API, mission dashboard and result tracking |
+| `05` | [theoros-bench](https://github.com/theoros-space/theoros-bench) | Open benchmark for onboard Earth observation AI |
+| `06` | [theoros-docs](https://github.com/theoros-space/theoros-docs) | Technical documentation and flight documents |
 
-## Planned layout
+## Lifecycle
 
-```
+| Step | What happens |
+|---|---|
+| Package | Model, sensor fingerprint, capability matrix and manifest in one versioned file |
+| Sign | Ed25519 signature; the satellite rejects anything unsigned or modified |
+| Uplink | Sized to fit a single ground pass, sent in resumable chunks |
+| Activate | The new model runs its onboard self-test before it serves results |
+| Roll back | The previous model stays on board until the new one passes |
+
+## Repository layout
+
+Planned structure. Directories appear as the code lands.
+
+```text
 src/theoros_delivery/   package format, signing, verification, CLI
 schemas/                manifest JSON schema
 docs/                   requirements, package format specification
@@ -31,17 +55,33 @@ tests/
 
 ## Requirements
 
-Requirements are listed in [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) with
-the prefix `DEL-REQ`. Every requirement is verified by a test, an
-analysis or an inspection, and referenced in the pull request that changes it.
+Every requirement lives in [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) with
+the prefix `DEL-REQ`. Each one names how it is verified (test, analysis or
+inspection), and every pull request that changes behaviour cites the
+requirement it serves.
 
 ## Contributing
 
-See the organisation [contributing guide](https://github.com/theoros-space/.github/blob/main/CONTRIBUTING.md).
-Outside contributions need a signed [CLA](https://github.com/theoros-space/.github/blob/main/CLA.md).
+Read the [contributing guide](https://github.com/theoros-space/.github/blob/main/CONTRIBUTING.md)
+before opening a pull request. Outside contributions need a signed
+[Contributor License Agreement](https://github.com/theoros-space/.github/blob/main/CLA.md).
+Report vulnerabilities privately as described in the
+[security policy](https://github.com/theoros-space/.github/blob/main/SECURITY.md), never in a public issue.
 
 ## License
 
 Source-available under the [Theoros Source-Available License 1.0](LICENSE).
-You may read and evaluate it; any use, copy or deployment needs a written
-license from Theoros. Contact licensing@theoros.space.
+You may read and evaluate this repository. Production use, modification,
+redistribution and training competing models need a written license from
+Theoros: licensing@theoros.space. See [which license applies where](https://github.com/theoros-space/.github/blob/main/LICENSING.md).
+
+---
+
+<p align="center">
+  <a href="https://github.com/theoros-space"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-paper.svg">
+    <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-ink.svg" width="28" alt="Theoros">
+  </picture></a>
+  <br>
+  <sub>Theoros &nbsp;·&nbsp; Onboard AI for Earth observation &nbsp;·&nbsp; Baku and Helsinki &nbsp;·&nbsp; <a href="https://theoros.space">theoros.space</a></sub>
+</p>
