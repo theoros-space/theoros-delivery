@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/banners/delivery-light.png" width="100%" alt="theoros-delivery">
 </picture>
 
-<p><a href="LICENSE"><img src="https://img.shields.io/badge/license-source--available%201.0-FF4B1F?style=flat-square&labelColor=11151C" alt="license: source-available 1.0"></a> <img src="https://img.shields.io/badge/status-pre--release-8B929D?style=flat-square&labelColor=11151C" alt="status: pre-release"> <a href="https://github.com/theoros-space"><img src="https://img.shields.io/badge/part-03%20of%2006-3E7BFA?style=flat-square&labelColor=11151C" alt="part: 03 of 06"></a></p>
+<p><a href="LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/license-source-available-1-0-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/license-source-available-1-0-light.png" height="31" alt="license: source-available 1.0"></picture></a> <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/status-pre-release-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/status-pre-release-light.png" height="31" alt="status: pre-release"></picture> <a href="https://github.com/theoros-space"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/part-03-of-06-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/badges/part-03-of-06-light.png" height="31" alt="part: 03 of 06"></picture></a></p>
 
 > [!NOTE]
 > **Status:** Pre-release. The repository is public so partners and reviewers can follow the work. Source code lands here from December 2026.
@@ -14,6 +14,12 @@
 Everything between a trained model and a model running in orbit: packaging,
 signing, uplink and rollback. A satellite only ever runs a package that
 Theoros signed and the operator approved.
+
+<p>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/signature-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/signature-light.png" width="32%" alt="signature"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/update-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/update-light.png" width="32%" alt="update"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/flight-budget-dark.png"><img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/stats/flight-budget-light.png" width="32%" alt="flight budget"></picture>
+</p>
 
 ## Where it fits
 
@@ -33,6 +39,12 @@ Theoros signed and the operator approved.
 | `06` | [theoros-docs](https://github.com/theoros-space/theoros-docs) | Technical documentation and flight documents |
 
 ## Lifecycle
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/delivery-lifecycle-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/delivery-lifecycle-light.png">
+  <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/github/diagrams/delivery-lifecycle-light.png" width="100%" alt="Package, sign, uplink, activate, roll back">
+</picture>
 
 | Step | What happens |
 |---|---|
@@ -79,8 +91,8 @@ Theoros: licensing@theoros.space. See [which license applies where](https://gith
 
 <p align="center">
   <a href="https://github.com/theoros-space"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-paper.svg">
-    <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-ink.svg" width="28" alt="Theoros">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-signal.svg">
+    <img src="https://raw.githubusercontent.com/theoros-space/theoros-brand/main/logo/svg/mark-signal.svg" width="28" alt="Theoros">
   </picture></a>
   <br>
   <sub>Theoros &nbsp;·&nbsp; Onboard AI for Earth observation &nbsp;·&nbsp; Baku and Helsinki &nbsp;·&nbsp; <a href="https://theoros.space">theoros.space</a></sub>
